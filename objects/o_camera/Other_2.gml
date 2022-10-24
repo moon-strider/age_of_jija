@@ -22,6 +22,8 @@ global.DEBUG = true
 global.LBASE.left = true
 global.RBASE.left = false
 
+global.SPAWNER = self
+
 // LEFT BASE UPGRADES
 global.LUPGRADES = {
 	level: 1,
@@ -46,6 +48,9 @@ global.RUPGRADES = {
 global.BUTTONS = {
 	unit_buttons: {
 		melee: {
+			range: 50,
+			unit: o_melee,
+			time: 1*room_speed,
 			spr: s_melee_lvl_1,
 			x1: 30,
 			y1: 90,
@@ -53,6 +58,9 @@ global.BUTTONS = {
 			y2: 190
 		},
 		ranged: {
+			range: 150,
+			unit: o_melee, //!!
+			time: 1*room_speed,
 			spr: s_base_lvl_1,
 			x1: 150,
 			y1: 90,
@@ -68,7 +76,7 @@ global.PTARGETS = [
 	o_base
 ]
 
-// TODO: make safezone for unit spawns
+// TODO: currency: xp and hp
 // TODO: ranged unit behaviour
 // TODO: xp
 // TODO: mutation tree + info
@@ -83,6 +91,7 @@ global.PTARGETS = [
 // TODO: tradeoffs that you can choose
 // TODO: upgrades to the game between levels
 // TODO: economics with different resources
-// TODO: levels increase after matcher
+// TODO: levels increase after match
 // TODO: permanent upgrades you can make
 // TODO: timed queue for upgrades
+// TODO: unit creation animation from lower to upper part of sprite

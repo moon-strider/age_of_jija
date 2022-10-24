@@ -4,8 +4,17 @@ draw_set_color(c_black)
 var names = variable_struct_get_names(global.BUTTONS.unit_buttons)
 for (var i = 0; i < array_length(names); i++) {
 	var btn = variable_struct_get(global.BUTTONS.unit_buttons, names[i])
-	if (mouse_hover(btn))
+	if (mouse_hover(btn)) {
 		draw_rectangle_color(btn.x1, btn.y1, btn.x2, btn.y2, c_green, c_green, c_green, c_green, 1)
+		if (mouse_check_button_pressed(mb_left)) {
+			array_push(queue, {
+				unit: btn.unit,
+				time: btn.time,
+				range: btn.range,
+				left: true
+			})
+		}
+	}
 	else
 		draw_rectangle(btn.x1, btn.y1, btn.x2, btn.y2, 1)
 	draw_sprite_stretched(btn.spr, 0, btn.x1, btn.y1, 100, 100)

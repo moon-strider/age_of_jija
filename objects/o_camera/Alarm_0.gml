@@ -1,0 +1,1 @@
+spawn_unit(unit, left, range, spawn_point)

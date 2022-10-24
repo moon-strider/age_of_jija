@@ -1,11 +1,9 @@
-// TODO: collision func for all units
 col = noone
 for (var i = 0; i < array_length(global.PTARGETS); i++) {
 	var colT = collision_line(x, y, x + range, y, global.PTARGETS[i], false, true)
 	if (colT == noone)
 		continue
-	if (colT.left == left and colT == global.LBASE
-		or colT.left == left and colT == global.RBASE)
+	if (colT.left == left and (colT == global.LBASE or colT == global.RBASE))
 		continue
 	if (distance_to_object(colT) < distance_to_object(col)) {
 		col = colT
@@ -22,7 +20,7 @@ if (col == noone) {
 		alarm[0] = atk_speed
 	}
 	if (alarm[0] == round(atk_speed / 2)) {
-		dead = take_damage(col, dmg)
+		dead = take_damage(col, dmg) // TODO: damage on specific frame
 	}
 }
 

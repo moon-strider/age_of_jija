@@ -6,5 +6,8 @@ draw_rectangle(x - 30, y - 90, x + 30, y - 80, 1)
 
 if (global.DEBUG) {
 	draw_line(x, y, x + 75 * image_xscale, y)
-	draw_text(x, y - 50, string(hp))
+	draw_text(x, y - 100, "left " + string(left))
+	draw_text(x, y - 85, "range "+ string(range))
+	draw_text(x, y - 70, string(hp))
+	draw_text(x, y - 55, string(col))
 }
