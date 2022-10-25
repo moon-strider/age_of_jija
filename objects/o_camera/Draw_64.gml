@@ -28,6 +28,13 @@ draw_rectangle_color(30, 40, 30 + (global.LBASE.hp / global.LBASE.maxhp) * 400,
 draw_rectangle(30, 40, 430, 80, 1)
 draw_text(30, 40, string(global.LBASE.hp))
 
+// LEFT XPBAR
+draw_rectangle_color(30, 10, 430, 40, c_black, c_black, c_black, c_black, 0)
+draw_rectangle_color(30, 10, 30 + (global.LXP / 1000) * 400, // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+					40, c_purple, c_purple, c_purple, c_purple, 0)
+draw_rectangle(30, 10, 430, 40, 1)
+draw_text(30, 10, string(global.LXP))
+
 // DRAW RIGHT HEALTHBAR
 draw_set_halign(fa_right)
 draw_rectangle_color(global.VW - 430, 40, global.VW - 30, 80, c_red, c_red, c_red, c_red, 0)

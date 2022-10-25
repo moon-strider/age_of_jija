@@ -26,6 +26,10 @@ if (col == noone) {
 
 if (dead) {
 	with col {
+		if (left)
+			global.RXP += col.xprew
+		else
+			global.LXP += col.xprew
 		instance_destroy()
 	}
 	col = noone

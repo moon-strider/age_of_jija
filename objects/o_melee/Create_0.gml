@@ -9,3 +9,5 @@ if (!left)
 range *= image_xscale
 
 col = noone
+
+xprew = 10

@@ -3,6 +3,11 @@ window_set_fullscreen(true)
 global.VW = 1920
 global.VH = 1080
 
+global.LXP = 0
+global.RXP = 0
+global.LLVL = 0
+global.RLVL = 0
+
 base_width = sprite_get_width(s_base_lvl_1)
 base_height = sprite_get_height(s_base_lvl_1)
 
@@ -95,3 +100,5 @@ global.PTARGETS = [
 // TODO: permanent upgrades you can make
 // TODO: timed queue for upgrades
 // TODO: unit creation animation from lower to upper part of sprite
+// TODO: tooltips on hover OVER EVERYTHING
+// TODO: healthbar & xpbar without gui?
